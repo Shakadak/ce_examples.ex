@@ -1,0 +1,3 @@
+%{
+  "computation_expressions": {:git, "https://github.com/Shakadak/computation_expression.ex", "f402604f8a1dd9deeed3adcd3afcc6ae3469cefe", []},
+}
