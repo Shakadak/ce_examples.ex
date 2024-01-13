@@ -57,8 +57,6 @@ defmodule DbExplicit do
 end
 
 defmodule DbResultBuilder do
-  use ComputationExpression
-
   import DbResult
 
   def _Bind(m, f) do
@@ -74,12 +72,13 @@ defmodule DbResultBuilder do
 end
 
 defmodule DbCompExpr do
-  require DbResultBuilder
+  import ComputationExpression
+
 
   import DbDomain
 
   def product1 do
-    DbResultBuilder.compute do
+    compute DbResultBuilder do
       let! custId = getCustomerId "Alice"
       let! orderId = getLastOrderForCustomer custId
       let! productId = getLastProductForOrder orderId
@@ -89,7 +88,7 @@ defmodule DbCompExpr do
   end
 
   def product2 do
-    DbResultBuilder.compute do
+    compute DbResultBuilder do
       let! _custId = getCustomerId "Alice"
       let! orderId = getLastOrderForCustomer "" # error !
       let! productId = getLastProductForOrder orderId
@@ -103,8 +102,6 @@ defmodule DbCompExpr do
 end
 
 defmodule DbResultBuilder2 do
-  use ComputationExpression
-
   import DbResult
 
   def _Bind(m, f) do
@@ -120,7 +117,7 @@ defmodule DbResultBuilder2 do
 end
 
 defmodule DbCompExpr2 do
-  require DbResultBuilder2
+  import ComputationExpression
 
   import DbResult
 
@@ -149,7 +146,7 @@ defmodule DbCompExpr2 do
   end
 
   def product1 do
-    DbResultBuilder2.compute do
+    compute DbResultBuilder2 do
       let! custId = getCustomerId "Alice"
       let! orderId = getLastOrderForCustomer custId
       let! productId = getLastProductForOrder orderId
@@ -159,7 +156,7 @@ defmodule DbCompExpr2 do
   end
 
   def product2 do
-    DbResultBuilder2.compute do
+    compute DbResultBuilder2 do
       let! _custId = getCustomerId "Alice"
       let! orderId = getLastOrderForCustomer {:customer_id, ""} # error
       let! productId = getLastProductForOrder orderId

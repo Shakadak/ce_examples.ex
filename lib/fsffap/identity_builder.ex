@@ -8,11 +8,11 @@ defmodule IdentityExample do
   import ComputationExpression
 
   def result do
-    compute IdentityBuilder, debug: true do
+    compute IdentityBuilder do
       let! x = 1
       let! y = 2
       pure x + y
     end
-    |> IO.inspect(label: "result=")
+    |> IO.inspect(label: "result=" )
   end
 end

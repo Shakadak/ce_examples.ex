@@ -13,8 +13,8 @@ defmodule DivideByWithCompExpr do
   end
 
   def divideByWorkflow(x, y, w, z) do
-    require MaybeBuilder
-    MaybeBuilder.compute do
+    import ComputationExpression
+    compute MaybeBuilder do
       let! a = x |> divideBy(y)
       let! b = a |> divideBy(w)
       let! c = b |> divideBy(z)
