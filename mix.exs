@@ -24,8 +24,8 @@ defmodule CeExamples.MixProject do
     [
       # {:dep_from_hexpm, "~> 0.3.0"},
       # {:dep_from_git, git: "elixir-lang/my_dep.git", tag: "0.1.0"}
-      # {:computation_expressions, path: "../computation_expressions"},
-      {:computation_expressions, git: "https://github.com/Shakadak/computation_expression.ex"},
+      # {:computation_expression, path: "../computation_expressions"},
+      {:computation_expression, git: "https://github.com/Shakadak/computation_expression.ex"},
     ]
   end
 end
