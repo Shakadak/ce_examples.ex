@@ -184,3 +184,183 @@ defmodule TraceExample do
     |> IO.inspect(label: "Result for yield then pure")
   end
 end
+
+defmodule TraceAlternate do
+  import Option
+
+  def _Bind(m, f) do
+    :ok = case m do
+      none() -> IO.puts("Binding with None. Exiting.")
+      some(a) -> IO.puts("Binding with Some(#{inspect(a)}). Continuing")
+    end
+    Option.bind(f, m)
+  end
+
+  def _Pure(x) do
+    :ok = IO.puts("Returning a unwrapped #{inspect(x)} as an option")
+    some(x)
+  end
+
+  def _PureFrom(m) do
+    :ok = IO.puts("Returning an option (#{inspect(m)}) directly")
+    m
+  end
+
+  def _Zero do
+    :ok = IO.puts("Zero")
+    none()
+  end
+
+  def _Yield(x) do
+    :ok = IO.puts("Yield an unwrapped #{inspect(x)} as an option")
+    some(x)
+  end
+
+  def _YieldFrom(x) do
+    :ok = IO.puts("Yield an option #{inspect(x)} directly")
+    some(x)
+  end
+
+  def _Combine(a, b) do
+    :ok = IO.puts("combining #{inspect(a)} with #{inspect(b)}")
+    case a do
+      some(_) -> a
+      none() -> b
+    end
+  end
+
+  def _Delay(f) do
+    :ok = IO.puts("Delay")
+    f.()
+  end
+end
+
+defmodule AlternateExample do
+  import Option
+  import ComputationExpression
+
+  def parseInt(s) do
+    Integer.parse(s)
+    |> case do
+      {i, ""} -> some({:i, i})
+      :error -> none()
+    end
+  end
+
+  def parseBool(s) do
+    case s do
+      "true" -> some({:b, true})
+      "false" -> some({:b, false})
+      _ -> none()
+    end
+  end
+
+  def ex1 do
+    compute TraceAlternate do
+      pure! parseBool("42") # fails
+      pure! parseInt("42")
+    end
+    |> IO.inspect(label: "Result for parsing")
+  end
+
+  def tryFind(m, k) do
+    case Map.fetch(m, k) do
+      {:ok, v} -> some(v)
+      :error -> none()
+    end
+  end
+
+  def ex2 do
+    map1 = %{"1" => "One", "2" => "Two"}
+    map2 = %{"A" => "Alice", "B" => "Bob"}
+    compute TraceAlternate do
+      pure! map1 |> tryFind("A")
+      pure! map2 |> tryFind("A")
+    end
+    |> IO.inspect(label: "Result for map lookup")
+  end
+end
+
+defmodule TraceCont do
+  import Option
+
+  def _Bind(m, f) do
+    :ok = case m do
+      none() -> IO.puts("Binding with None. Exiting.")
+      some(a) -> IO.puts("Binding with Some(#{inspect(a)}). Continuing")
+    end
+    Option.bind(f, m)
+  end
+
+  def _Pure(x) do
+    :ok = IO.puts("Returning a unwrapped #{inspect(x)} as an option")
+    some(x)
+  end
+
+  def _PureFrom(m) do
+    :ok = IO.puts("Returning an option (#{inspect(m)}) directly")
+    m
+  end
+
+  def _Zero do
+    :ok = IO.puts("Zero")
+    _Pure({})
+  end
+
+  def _Yield(x) do
+    :ok = IO.puts("Yield an unwrapped #{inspect(x)} as an option")
+    some(x)
+  end
+
+  def _YieldFrom(x) do
+    :ok = IO.puts("Yield an option #{inspect(x)} directly")
+    some(x)
+  end
+
+  def _Combine(a, b) do
+    :ok = IO.puts("combining #{inspect(a)} with #{inspect(b)}")
+    _Bind(a, fn {} -> b end)
+  end
+
+  def _Delay(f) do
+    :ok = IO.puts("Delay")
+    f.()
+  end
+end
+
+defmodule TraceContExample do
+  import ComputationExpression
+
+  def ex1 do
+    compute TraceCont do
+      ignore = fn _ -> {} end
+      if true do ignore.(IO.puts("hello.........")) end
+      if false do ignore.(IO.puts("........world")) end
+      pure 1
+    end
+    |> IO.inspect(label: "Result for sequential combine")
+  end
+end
+
+defmodule TraceNoBind do
+  import Option
+
+  def _PureFrom(m), do: m
+  def _Zero, do: some {}
+  def _Combine(a, b), do: Option.bind(fn {} -> b end, a)
+  def _Delay(f), do: f.()
+end
+
+defmodule TraceNoBindExample do
+  def ex1 do
+    import Option
+    import ComputationExpression
+    compute TraceNoBind do
+      let ignore = fn _ -> {} end
+      if true do ignore.(IO.puts("hello.........")) end
+      if false do ignore.(IO.puts("........world")) end
+      pure! some(1)
+    end
+    |> IO.inspect(label: "Result for minimal combine")
+  end
+end

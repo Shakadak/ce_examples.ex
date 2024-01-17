@@ -22,6 +22,11 @@ defmodule ListWorkflowBuilder do
     m
   end
 
+  def _For(m, f) do
+    :ok = IO.puts("For #{inspect(m)}")
+    _Bind(m, f)
+  end
+
   def _Combine(a, b) do
     :ok = IO.puts("combining #{inspect(a)} and #{inspect(b)}")
     Enum.concat([a, b])
@@ -74,6 +79,26 @@ defmodule ListExample do
 
   def ex3 do
     compute List do
+      let! x = 1..3
+      let! y = [10, 20, 30]
+      pure x + y
+    end
+    |> IO.inspect(label: "Return")
+  end
+
+  def ex4 do
+    compute List do
+      for x in 1..3 do
+        for y in [10, 20, 30] do
+          pure x + y
+        end
+      end
+    end
+    |> IO.inspect(label: "Return")
+  end
+
+  def ex5 do
+    compute List do
       let! i = ["red", "blue"]
       yield i
       let! j = ["hat", "tie"]
@@ -82,7 +107,7 @@ defmodule ListExample do
     |> IO.inspect(label: "Result for for..in..do")
   end
 
-  def ex3_1 do
+  def ex5_1 do
     compute List do
       let! i = ["red", "blue"]
       pure i
@@ -92,7 +117,7 @@ defmodule ListExample do
     |> IO.inspect(label: "Result for for..in..do")
   end
 
-  def ex4 do
+  def ex6 do
     compute List do
       yield 1
       yield 2
@@ -100,5 +125,32 @@ defmodule ListExample do
       yield 4
     end
     |> IO.inspect(label: "Result for yield × 4")
+  end
+end
+
+defmodule ListMinimal do
+  def _Yield(x), do: [x]
+  def _For(m, f), do: m |> Enum.flat_map(f)
+  def _Combine(a, b), do: Enum.concat(a, b)
+  def _Delay(f), do: f.()
+end
+
+defmodule ListMinimalExample do
+  import ComputationExpression
+
+  def ex1 do
+    compute ListMinimal do
+      yield 1
+      yield 2
+    end
+    |> IO.inspect(label: "Result")
+  end
+
+  def ex2 do
+    compute ListMinimal do
+      for i in 1..5, do: yield i + 2
+      yield 42
+    end
+    |> IO.inspect(label: "Result")
   end
 end
