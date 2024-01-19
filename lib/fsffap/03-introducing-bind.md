@@ -64,7 +64,7 @@ def m ~>> f do
   f.(m)
 end
 
-logginWorkflow = (
+loggingWorkflow = (
   1 ~>> (& &1 + 2) ~>> (& &1 * 42) ~>> &Function.identity/1
 )
 ```
