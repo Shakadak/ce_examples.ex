@@ -12,10 +12,10 @@ import Fs.Map
 
 # Previous
 
-8.  [Implementing a CE: Delay and Run](08-implementing-a-ce-delay-and-run.md)
-10. [Implementing a CE: Adding Laziness](10-implementing-a-ce-adding-laziness.md)
+8:  [Implementing a CE: Delay and Run](08-implementing-a-ce-delay-and-run.md)
+10: [Implementing a CE: Adding Laziness](10-implementing-a-ce-adding-laziness.md)
 
 # Next
 
-8.  [Implementing a CE: Delay and Run](08-implementing-a-ce-delay-and-run.md)
-10. [Implementing a CE: Adding Laziness](10-implementing-a-ce-adding-laziness.md)
+8:  [Implementing a CE: Delay and Run](08-implementing-a-ce-delay-and-run.md)
+10: [Implementing a CE: Adding Laziness](10-implementing-a-ce-adding-laziness.md)

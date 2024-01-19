@@ -12,10 +12,10 @@ import Fs.Map
 
 # Previous
 
-6. [Implementing a CE: Zero and Yield](06-implementing-a-ce-zero-and-yield.md)
-8. [Implementing a CE: Delay and Run](08-implementing-a-ce-delay-and-run.md)
+6: [Implementing a CE: Zero and Yield](06-implementing-a-ce-zero-and-yield.md)
+8: [Implementing a CE: Delay and Run](08-implementing-a-ce-delay-and-run.md)
 
 # Next
 
-6. [Implementing a CE: Zero and Yield](06-implementing-a-ce-zero-and-yield.md)
-8. [Implementing a CE: Delay and Run](08-implementing-a-ce-delay-and-run.md)
+6: [Implementing a CE: Zero and Yield](06-implementing-a-ce-zero-and-yield.md)
+8: [Implementing a CE: Delay and Run](08-implementing-a-ce-delay-and-run.md)

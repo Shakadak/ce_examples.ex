@@ -12,10 +12,10 @@ import Fs.Map
 
 # Previous
 
-4. [Computation expressions and wrapper types](04-computation-expressions-and-wrapper-types.md)
-6. [Implementing a CE: Zero and Yield](06-implementing-a-ce-zero-and-yield.md)
+4: [Computation expressions and wrapper types](04-computation-expressions-and-wrapper-types.md)
+6: [Implementing a CE: Zero and Yield](06-implementing-a-ce-zero-and-yield.md)
 
 # Next
 
-4. [Computation expressions and wrapper types](04-computation-expressions-and-wrapper-types.md)
-6. [Implementing a CE: Zero and Yield](06-implementing-a-ce-zero-and-yield.md)
+4: [Computation expressions and wrapper types](04-computation-expressions-and-wrapper-types.md)
+6: [Implementing a CE: Zero and Yield](06-implementing-a-ce-zero-and-yield.md)

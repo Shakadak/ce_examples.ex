@@ -12,8 +12,8 @@ import Fs.Map
 
 # Previous
 
-1. [Computation expressions: Introduction](01-computation-expressions-introduction.md) 
-3. [Introducing 'bind'](03-introducting-bind.md)
+1: [Computation expressions: Introduction](01-computation-expressions-introduction.md) 
+3: [Introducing 'bind'](03-introducting-bind.md)
 
 # Recap
 
@@ -371,5 +371,5 @@ bad  = divideByWorkflow.(12, 3, 0, 1)
 
 # Next
 
-1. [Computation expressions: Introduction](01-computation-expressions-introduction.md) 
-3. [Introducing 'bind'](03-introducting-bind.md)
+1: [Computation expressions: Introduction](01-computation-expressions-introduction.md) 
+3: [Introducing 'bind'](03-introducting-bind.md)

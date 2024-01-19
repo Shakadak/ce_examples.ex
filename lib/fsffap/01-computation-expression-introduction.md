@@ -12,7 +12,7 @@ import Fs.Map
 
 # Next
 
-2. [Understanding continuations](02-understanding-continuations.md)
+2: [Understanding continuations](02-understanding-continuations.md)
 
 # Background
 
@@ -199,4 +199,4 @@ multiLookup.("X")  |> IO.inspect(label: "Result for X is")
 
 # Next
 
-2. [Understanding continuations](02-understanding-continuations.md)
+2: [Understanding continuations](02-understanding-continuations.md)

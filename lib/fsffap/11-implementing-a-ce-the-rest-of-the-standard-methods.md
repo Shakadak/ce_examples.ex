@@ -12,8 +12,8 @@ import Fs.Map
 
 # Previous
 
-10. [Implementing a CE: Adding Laziness](10-implementing-a-ce-adding-laziness.md)
+10: [Implementing a CE: Adding Laziness](10-implementing-a-ce-adding-laziness.md)
 
 # Previous
 
-10. [Implementing a CE: Adding Laziness](10-implementing-a-ce-adding-laziness.md)
+10: [Implementing a CE: Adding Laziness](10-implementing-a-ce-adding-laziness.md)

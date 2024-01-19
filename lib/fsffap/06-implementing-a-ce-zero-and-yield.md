@@ -12,10 +12,10 @@ import Fs.Map
 
 # Previous
 
-5. [More on wrapper types](05-more-on-wrapper-types.md)
-7. [Implementing a CE: Combine](07-implementing-a-ce-combine.md)
+5: [More on wrapper types](05-more-on-wrapper-types.md)
+7: [Implementing a CE: Combine](07-implementing-a-ce-combine.md)
 
 # Next
 
-5. [More on wrapper types](05-more-on-wrapper-types.md)
-7. [Implementing a CE: Combine](07-implementing-a-ce-combine.md)
+5: [More on wrapper types](05-more-on-wrapper-types.md)
+7: [Implementing a CE: Combine](07-implementing-a-ce-combine.md)

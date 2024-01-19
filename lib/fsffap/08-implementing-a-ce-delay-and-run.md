@@ -12,11 +12,11 @@ import Fs.Map
 
 # Previous
 
-7.  [Implementing a CE: Combine](07-implementing-a-ce-combine.md)
-9.  [Implementing a CE: Overloading](09-implementing-a-ce-overloading.md)
+7:  [Implementing a CE: Combine](07-implementing-a-ce-combine.md)
+9:  [Implementing a CE: Overloading](09-implementing-a-ce-overloading.md)
 
 # Next
 
-7.  [Implementing a CE: Combine](07-implementing-a-ce-combine.md)
-9.  [Implementing a CE: Overloading](09-implementing-a-ce-overloading.md)
+7:  [Implementing a CE: Combine](07-implementing-a-ce-combine.md)
+9:  [Implementing a CE: Overloading](09-implementing-a-ce-overloading.md)
 

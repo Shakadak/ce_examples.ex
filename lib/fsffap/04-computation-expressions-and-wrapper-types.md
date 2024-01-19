@@ -12,10 +12,10 @@ import Fs.Map
 
 # Previous
 
-3. [Introducing 'bind'](03-introducting-bind.md)
-5. [More on wrapper types](05-more-on-wrapper-types.md)
+3: [Introducing 'bind'](03-introducting-bind.md)
+5: [More on wrapper types](05-more-on-wrapper-types.md)
 
 # Next
 
-3. [Introducing 'bind'](03-introducting-bind.md)
-5. [More on wrapper types](05-more-on-wrapper-types.md)
+3: [Introducing 'bind'](03-introducting-bind.md)
+5: [More on wrapper types](05-more-on-wrapper-types.md)

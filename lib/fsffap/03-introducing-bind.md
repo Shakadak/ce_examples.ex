@@ -12,10 +12,10 @@ import Fs.Map
 
 # Previous
 
-2. [Computation expressions: Introduction](02-understanding-continuations.md) 
-4. [Computation expressions and wrapper types](04-computation-expressions-and-wrapper-types.md)
+2: [Computation expressions: Introduction](02-understanding-continuations.md) 
+4: [Computation expressions and wrapper types](04-computation-expressions-and-wrapper-types.md)
 
 # Next
 
-2. [Computation expressions: Introduction](02-understanding-continuations.md) 
-4. [Computation expressions and wrapper types](04-computation-expressions-and-wrapper-types.md)
+2: [Computation expressions: Introduction](02-understanding-continuations.md) 
+4: [Computation expressions and wrapper types](04-computation-expressions-and-wrapper-types.md)

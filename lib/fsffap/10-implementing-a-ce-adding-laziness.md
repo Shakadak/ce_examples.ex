@@ -12,10 +12,10 @@ import Fs.Map
 
 # Previous
 
-9.  [Implementing a CE: Overloading](09-implementing-a-ce-overloading.md)
-11. [Implementing a CE: The rest of the standard methods](11-implementing-a-ce-the-rest-of-the-standard-methods.md)
+9:  [Implementing a CE: Overloading](09-implementing-a-ce-overloading.md)
+11: [Implementing a CE: The rest of the standard methods](11-implementing-a-ce-the-rest-of-the-standard-methods.md)
 
 # Next
 
-9.  [Implementing a CE: Overloading](09-implementing-a-ce-overloading.md)
-11. [Implementing a CE: The rest of the standard methods](11-implementing-a-ce-the-rest-of-the-standard-methods.md)
+9:  [Implementing a CE: Overloading](09-implementing-a-ce-overloading.md)
+11: [Implementing a CE: The rest of the standard methods](11-implementing-a-ce-the-rest-of-the-standard-methods.md)
