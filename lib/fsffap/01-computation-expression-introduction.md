@@ -7,7 +7,12 @@ import Fs.Option
 import Fs.Map
 ```
 
-[Series link](README.md)
+[Series link](README.md)  
+[Original article](https://fsharpforfunandprofit.com/posts/computation-expressions-intro/)
+
+# Next
+
+2. [Understanding continuations](02-understanding-continuations.md)
 
 # Background
 
@@ -194,4 +199,4 @@ multiLookup.("X")  |> IO.inspect(label: "Result for X is")
 
 # Next
 
-[Understanding continuations](02.md)
+2. [Understanding continuations](02-understanding-continuations.md)
