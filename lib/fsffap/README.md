@@ -1,7 +1,7 @@
 https://fsharpforfunandprofit.com/series/computation-expressions/
 
-1.  [Computation expressions: Introduction](01.md)  
-2.  [Understanding continuations](02.md)  
+1.  [Computation expressions: Introduction](01.md)
+2.  [Understanding continuations](02.md)
 3.  [Introducing 'bind'](03-introducting-bind.md)
 4.  [Computation expressions and wrapper types](04-computation-expressions-and-wrapper-types.md)
 5.  [More on wrapper types](05-more-on-wrapper-types.md)

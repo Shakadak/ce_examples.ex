@@ -12,8 +12,8 @@ import Fs.Map
 
 # Previous
 
-11. [Implementing a CE: The rest of the standard methods](11-implementing-a-ce-the-rest-of-the-standard-methods.md)
+10. [Implementing a CE: Adding Laziness](10-implementing-a-ce-adding-laziness.md)
 
 # Previous
 
-11. [Implementing a CE: The rest of the standard methods](11-implementing-a-ce-the-rest-of-the-standard-methods.md)
+10. [Implementing a CE: Adding Laziness](10-implementing-a-ce-adding-laziness.md)
